@@ -1,7 +1,14 @@
 import React from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+import { doctors } from '../assets/assets';
 
 const Indoctor = () => {
-  const indoctor = {
+
+  const {id}=useParams()
+  console.log({id})
+  const navigate=useNavigate()
+
+  const doctor = {
     id: 1,
     imgSrc:
       'https://peopleenespanol.com/thmb/kajG-Y8Ubwy6R5KLrmieKDJYRGk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/gettyimages-450369552-afa112d8a0ea44aeaa8ab32e3c905d9e.jpg',
@@ -19,15 +26,16 @@ const Indoctor = () => {
     `,
   };
 
-  console.log(indoctor.id);
+  console.log({id});
 
   return (
     <div className="h-screen flex bg-black flex-row">
-      <img src={indoctor.imgSrc} alt={indoctor.name} className="object-cover h-80" />
+      <img src={doctor.imgSrc} alt={doctors.name} className="object-cover h-80" />
       <div className="text-white flex flex-col p-4">
-        <h1 className="text-3xl font-semibold">{indoctor.name}</h1>
-        <p className="text-xl">{indoctor.specialization}</p>
-        <p className="mt-2 text-sm text-gray-300">{indoctor.description}</p>
+        <h1 className="text-3xl font-semibold">{doctor.name}</h1>
+        <p className="text-xl">{doctor.specialization}</p>
+        <p className="mt-2 text-sm text-gray-300">{doctor.description}</p>
+        <p onClick={()=>{navigate("/booking")}} className="mt-2 text-sm cursor-pointer border-white-400 border-2 block text-gray-300">Book Appointment</p>
       </div>
     </div>
   );
