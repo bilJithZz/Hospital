@@ -10,6 +10,7 @@ import Bookings from "./Content/Bookings"
 import Profile from './Content/Profile'
 import Rough from './Content/Rough'
 import Department from './Componets/Department'
+import Contact from './Content/Contact'
 
 
 
@@ -25,6 +26,7 @@ const App = () => {
     <Route path='/bookings' element={<Bookings/>}/>
     <Route path="/profile" element={<Profile/>}/>
     <Route path="/rough" element={<Rough/>}/>
+    <Route path="/contact" element={<Contact/>}/>
     <Route path="/department" element={<Department/>}/>
     </Routes> 
     <Footer />
