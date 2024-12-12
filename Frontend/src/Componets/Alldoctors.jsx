@@ -19,7 +19,7 @@ const Alldoctors = () => {
         navigate(`/alldoc/${doctorid}`)
       }
   return (
-    <div className='flex flex-row'>
+    <div className='flex bg-green-50 flex-row'>
       <div className="flex w-1/5 flex-col">
   {doctorSpecializations.map((specialization, index) => (
     <div className='text-black border-cyan-500 border cursor-pointer' onClick={()=>setDocspez(specialization.name)} key={index}>

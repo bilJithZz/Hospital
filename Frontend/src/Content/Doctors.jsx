@@ -13,9 +13,12 @@ const handleDoctorClick = () => {
 }
 
   return (
-    <div className="h-auto mb-10 bg-green-50">
+    <div className="h-auto  bg-green-50">
       <div className="w-4/5 flex gap-2 flex-col m-auto pt-60">
         
+        <div>
+          <Department/>
+        </div>
        <div className='flex m-auto justify-center flex-col'>
         <p className="text-2xl  text-center font-bold">Top Doctors To Book</p> <br />
         <p className="text-lg text-gray-700">Select a doctor to book your appointment</p>
@@ -23,7 +26,6 @@ const handleDoctorClick = () => {
       
 
       <div className="flex">
-        <Specialization />
       </div>
 
         <div  className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full mt-8">
@@ -31,9 +33,9 @@ const handleDoctorClick = () => {
           {doctors.map((doctor,index)=>{
            return (
             <div onClick={handleDoctorClick} className=" flex flex-col" key={index}>
-              <img src={doctor.imgSrc} alt="" />
+              <img className='rounded-sm h-52' src={doctor.imgSrc} alt="" />
               <div className="flex-col flex">
-              <p className="font-bold">{doctor.name}</p>
+              <p className="font-semibold">{doctor.name}</p>
               <p className="text-gray-500">{doctor.specialization}</p>
               </div>
             </div>
@@ -41,7 +43,7 @@ const handleDoctorClick = () => {
           })}
         </div>
  
-    <p onClick={()=>{navigate('/alldoc')}} className='cursor-pointer flex text-center mt-6 py-3 px-6 bg-customGreen rounded-full'>See More</p>
+    <p onClick={()=>{navigate('/alldoc')}} className='cursor-pointer w-32 flex text-center mt-6 py-3 px-6 bg-customGreen rounded-full'>See More</p>
       </div>
     </div>
   );

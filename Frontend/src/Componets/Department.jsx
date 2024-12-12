@@ -1,52 +1,92 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Department = () => {
 
-    const departments=[{
-       id:"1",
-       img:" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQubSneQ_ldwHfi5cbRUMN9K0eN3mEr2XS5ne-7aKWTc9x18RQNqM-fqHdVXuFiVZojwDo_Z0Ok0Ni7pDl4vrGxcTjAP0YTF922DDsWB_fHlw",
-       name:"ent"
-    },{
-        id:"2",
-        img:" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQubSneQ_ldwHfi5cbRUMN9K0eN3mEr2XS5ne-7aKWTc9x18RQNqM-fqHdVXuFiVZojwDo_Z0Ok0Ni7pDl4vrGxcTjAP0YTF922DDsWB_fHlw",
-        name:"ent"
-    },
-    {
-        id:"3",
-        img:" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQubSneQ_ldwHfi5cbRUMN9K0eN3mEr2XS5ne-7aKWTc9x18RQNqM-fqHdVXuFiVZojwDo_Z0Ok0Ni7pDl4vrGxcTjAP0YTF922DDsWB_fHlw",
-        name:"ent"
-     },
-     {
-        id:"4",
-        img:" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQubSneQ_ldwHfi5cbRUMN9K0eN3mEr2XS5ne-7aKWTc9x18RQNqM-fqHdVXuFiVZojwDo_Z0Ok0Ni7pDl4vrGxcTjAP0YTF922DDsWB_fHlw",
-        name:"ent"
-     },
-     {
-        id:"5",
-        img:" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQubSneQ_ldwHfi5cbRUMN9K0eN3mEr2XS5ne-7aKWTc9x18RQNqM-fqHdVXuFiVZojwDo_Z0Ok0Ni7pDl4vrGxcTjAP0YTF922DDsWB_fHlw",
-        name:"ent"
-     },
-    ]
+        const navigate=useNavigate()
 
-  return (
-    <div className=' flex flex-col mt-72 gap-12 m-auto w-5/6 '>
-        <div className=' '>
-             <p className='text-3xl flex items-center justify-center  font-semibold'>Various Departments</p>
-        </div>
-        <div className='flex  justify-center flex-row gap-5'>
-           {
-            departments.map((department,index)=>{
-                return(
-                    <div className='flex cursor-pointer flex-col gap-3' key={index}>
-                    <img className='h-36 w-36 rounded-full object-cover' src={department.img} alt="" />
-                    <p className='flex justify-center'>{department.name}</p>
-                     </div>
-                )
-            })
-           }
-        </div>
-    </div>
-  )
-}
+        const [selectdepartment,setSelectdepartment]=useState(false)
 
-export default Department
+        const handlechnage=()=>{
+
+            setSelectdepartment(true)
+            setTimeout(() => {
+                navigate("/contact"); 
+              }, 70);
+           
+        }
+
+    const departments = [
+        {
+            id: "1",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQubSneQ_ldwHfi5cbRUMN9K0eN3mEr2XS5ne-7aKWTc9x18RQNqM-fqHdVXuFiVZojwDo_Z0Ok0Ni7pDl4vrGxcTjAP0YTF922DDsWB_fHlw",
+            name: "ENT",
+        },
+        {
+            id: "2",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQubSneQ_ldwHfi5cbRUMN9K0eN3mEr2XS5ne-7aKWTc9x18RQNqM-fqHdVXuFiVZojwDo_Z0Ok0Ni7pDl4vrGxcTjAP0YTF922DDsWB_fHlw",
+            name: "Cardiology",
+        },
+        {
+            id: "3",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQubSneQ_ldwHfi5cbRUMN9K0eN3mEr2XS5ne-7aKWTc9x18RQNqM-fqHdVXuFiVZojwDo_Z0Ok0Ni7pDl4vrGxcTjAP0YTF922DDsWB_fHlw",
+            name: "Neurology",
+        },
+        {
+            id: "4",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQubSneQ_ldwHfi5cbRUMN9K0eN3mEr2XS5ne-7aKWTc9x18RQNqM-fqHdVXuFiVZojwDo_Z0Ok0Ni7pDl4vrGxcTjAP0YTF922DDsWB_fHlw",
+            name: "Orthopedics",
+        },
+        {
+            id: "5",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQubSneQ_ldwHfi5cbRUMN9K0eN3mEr2XS5ne-7aKWTc9x18RQNqM-fqHdVXuFiVZojwDo_Z0Ok0Ni7pDl4vrGxcTjAP0YTF922DDsWB_fHlw",
+            name: "Pediatrics",
+        },
+        {
+            id: "5",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQubSneQ_ldwHfi5cbRUMN9K0eN3mEr2XS5ne-7aKWTc9x18RQNqM-fqHdVXuFiVZojwDo_Z0Ok0Ni7pDl4vrGxcTjAP0YTF922DDsWB_fHlw",
+            name: "Pediatrics",
+        },
+        {
+            id: "5",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQubSneQ_ldwHfi5cbRUMN9K0eN3mEr2XS5ne-7aKWTc9x18RQNqM-fqHdVXuFiVZojwDo_Z0Ok0Ni7pDl4vrGxcTjAP0YTF922DDsWB_fHlw",
+            name: "Pediatrics",
+        },
+        {
+            id: "5",
+            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQubSneQ_ldwHfi5cbRUMN9K0eN3mEr2XS5ne-7aKWTc9x18RQNqM-fqHdVXuFiVZojwDo_Z0Ok0Ni7pDl4vrGxcTjAP0YTF922DDsWB_fHlw",
+            name: "Pediatrics",
+        },
+    ];
+
+    return (
+        <div className="flex flex-col gap-12 m-auto w-4/6">
+            <div>
+                <p className="text-3xl flex items-center justify-center font-semibold">
+                    Various Departments
+                </p>
+            </div>
+            <div className="flex overflow-x-scroll scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100 py-3">
+                {departments.map((department) => (
+                    <div
+                        className="flex  hover:text-customGreen cursor-pointer flex-col gap-3 p-3 rounded-md min-w-max"
+                        key={department.id}
+                    >
+                      <img
+  onClick={handlechnage}
+  className={`h-36 w-36 p-1 rounded-full object-cover ${
+    selectdepartment ? "hover:bg-customGreen" : "hover:bg-black"
+  }`}
+  src={department.img}
+  alt={department.name}
+/>
+
+                        <p className="flex justify-center font-medium">{department.name}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+};
+
+export default Department;

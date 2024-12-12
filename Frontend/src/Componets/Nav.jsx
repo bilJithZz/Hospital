@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from "../assets/Logo.png";
-import logo2 from "../assets/Title.png"; // Assuming logo2 exists
+import logo2 from "../assets/Title.png"; 
 
 const Nav = () => {
   const [isUser, setIsUser] = useState(false);
   const [color, setColor] = useState(false);
 
-  // To change color when scrolling
+  
   const changecolor = () => {
     if (window.scrollY >= 90) {
       setColor(true);
@@ -16,7 +16,6 @@ const Nav = () => {
     }
   };
 
-  // Adding scroll event listener
   React.useEffect(() => {
     window.addEventListener('scroll', changecolor);
     return () => {
@@ -52,6 +51,7 @@ const Nav = () => {
           <li>Services</li>
         </NavLink>
       </ul>
+      <div className='pr-3'>
 
       {isUser ? (
         <div
@@ -75,6 +75,7 @@ const Nav = () => {
           Create Account
         </div>
       )}
+      </div>
     </div>
   );
 };

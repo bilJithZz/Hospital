@@ -3,7 +3,7 @@ import { doctors } from '../assets/assets'
 
 const Booking = () => {
   return (
-   <div className="h-screen  w-screen bg-black">
+   <div className="h-screen  w-screen bg-green-50">
     <div className="flex w-4/6 m-auto flex-col">
         <div className=" flex flex-row border-gray-200 border-2 p-2">
          

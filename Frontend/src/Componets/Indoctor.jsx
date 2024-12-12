@@ -29,9 +29,9 @@ const Indoctor = () => {
   console.log({id});
 
   return (
-    <div className="h-screen flex bg-black flex-row">
-      <img src={doctor.imgSrc} alt={doctors.name} className="object-cover h-80" />
-      <div className="text-white flex flex-col p-4">
+    <div className="h-screen flex  bg-green justify-center mt-44 w-5/6 m-auto flex-row">
+      <img src={doctor.imgSrc} alt={doctors.name} className="object-cover rounded-lg  h-80" />
+      <div className="text-black flex flex-col p-4">
         <h1 className="text-3xl font-semibold">{doctor.name}</h1>
         <p className="text-xl">{doctor.specialization}</p>
         <p className="mt-2 text-sm text-gray-300">{doctor.description}</p>
