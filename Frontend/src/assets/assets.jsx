@@ -101,6 +101,74 @@ export const doctors = [
       location: 'San Diego, CA',
       services: ['Bone Fracture Repair', 'Orthopedic Surgery', 'Sports Rehabilitation'],
     },
+    {
+      id: 6,
+      imgSrc:
+        'https://peopleenespanol.com/thmb/kajG-Y8Ubwy6R5KLrmieKDJYRGk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/gettyimages-450369552-afa112d8a0ea44aeaa8ab32e3c905d9e.jpg',
+      name: 'Doctor Name 6',
+      specialization: 'Orthopedic',
+      experience: 15,
+      rating: 4.9,
+      consultationFee: 800,
+      availability: 'Mon-Fri, 8 AM - 3 PM',
+      contact: {
+        phone: '+1234567895',
+        email: 'doctor6@example.com',
+      },
+      location: 'San Diego, CA',
+      services: ['Bone Fracture Repair', 'Orthopedic Surgery', 'Sports Rehabilitation'],
+    },
+    {
+      id: 6,
+      imgSrc:
+        'https://peopleenespanol.com/thmb/kajG-Y8Ubwy6R5KLrmieKDJYRGk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/gettyimages-450369552-afa112d8a0ea44aeaa8ab32e3c905d9e.jpg',
+      name: 'Doctor Name 6',
+      specialization: 'Orthopedic',
+      experience: 15,
+      rating: 4.9,
+      consultationFee: 800,
+      availability: 'Mon-Fri, 8 AM - 3 PM',
+      contact: {
+        phone: '+1234567895',
+        email: 'doctor6@example.com',
+      },
+      location: 'San Diego, CA',
+      services: ['Bone Fracture Repair', 'Orthopedic Surgery', 'Sports Rehabilitation'],
+    },
+    {
+      id: 6,
+      imgSrc:
+        'https://peopleenespanol.com/thmb/kajG-Y8Ubwy6R5KLrmieKDJYRGk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/gettyimages-450369552-afa112d8a0ea44aeaa8ab32e3c905d9e.jpg',
+      name: 'Doctor Name 6',
+      specialization: 'Orthopedic',
+      experience: 15,
+      rating: 4.9,
+      consultationFee: 800,
+      availability: 'Mon-Fri, 8 AM - 3 PM',
+      contact: {
+        phone: '+1234567895',
+        email: 'doctor6@example.com',
+      },
+      location: 'San Diego, CA',
+      services: ['Bone Fracture Repair', 'Orthopedic Surgery', 'Sports Rehabilitation'],
+    },
+    {
+      id: 6,
+      imgSrc:
+        'https://peopleenespanol.com/thmb/kajG-Y8Ubwy6R5KLrmieKDJYRGk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/gettyimages-450369552-afa112d8a0ea44aeaa8ab32e3c905d9e.jpg',
+      name: 'Doctor Name 6',
+      specialization: 'Orthopedic',
+      experience: 15,
+      rating: 4.9,
+      consultationFee: 800,
+      availability: 'Mon-Fri, 8 AM - 3 PM',
+      contact: {
+        phone: '+1234567895',
+        email: 'doctor6@example.com',
+      },
+      location: 'San Diego, CA',
+      services: ['Bone Fracture Repair', 'Orthopedic Surgery', 'Sports Rehabilitation'],
+    },
   ];
   
 
