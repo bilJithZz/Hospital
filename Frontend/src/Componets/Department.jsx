@@ -19,12 +19,12 @@ const Department = () => {
     const departments = [
         {
             id: "1",
-            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQubSneQ_ldwHfi5cbRUMN9K0eN3mEr2XS5ne-7aKWTc9x18RQNqM-fqHdVXuFiVZojwDo_Z0Ok0Ni7pDl4vrGxcTjAP0YTF922DDsWB_fHlw",
+            img: "https://img.freepik.com/free-vector/gynecology-consultation-illustration_23-2148671930.jpg?uid=R178646132&ga=GA1.1.1279688011.1723220364",
             name: "ENT",
         },
         {
             id: "2",
-            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQubSneQ_ldwHfi5cbRUMN9K0eN3mEr2XS5ne-7aKWTc9x18RQNqM-fqHdVXuFiVZojwDo_Z0Ok0Ni7pDl4vrGxcTjAP0YTF922DDsWB_fHlw",
+            img: "https://img.freepik.com/premium-vector/otorhinolaryngologist-consultation-with-diverse-group-patients-hospital-setting_1324816-28867.jpg?w=1380",
             name: "Cardiology",
         },
         {
@@ -75,7 +75,7 @@ const Department = () => {
                       <img
   onClick={handlechnage}
   className={`h-36 w-36 p-1 rounded-full object-cover ${
-    selectdepartment ? "hover:bg-customGreen" : "hover:bg-black"
+    selectdepartment ? "hover:bg-black" : "hover:bg-customGreen"
   }`}
   src={department.img}
   alt={department.name}

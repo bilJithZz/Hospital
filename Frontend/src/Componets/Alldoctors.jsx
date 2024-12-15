@@ -4,42 +4,49 @@ import { doctors } from '../assets/assets';
 import { doctorSpecializations } from '../assets/assets';
 
 const Alldoctors = () => {
+  const navigate = useNavigate();
+  const [docspez, setDocspez] = useState(null); // selected specialization
+  const [filtered, setFiltered] = useState(doctors); // Initially show all doctors
 
-  const navigate=useNavigate()
-    const[docspez,setDocspez]=useState(null)
-    const[filtered,setFiltered]=useState()
+ 
+  const filteredDocs = docspez ? doctors.filter(doctor => doctor.specialization === docspez) : doctors;
 
-    const filteredDocs=doctors.filter(doctor=>
-      doctor.specialization===docspez
-    )
+  const handleDoctorClick = (doctorid) => {
+    navigate(`/alldoc/${doctorid}`);
+  }
 
-    
-    const handleChange=(doctorid)=>
-      {
-        navigate(`/alldoc/${doctorid}`)
-      }
   return (
-    <div className='flex bg-green-50 flex-row'>
+    <div className='bg-green-50'>
+    <div className='flex mt-20 w-5/6 m-auto gap-6  bg-green-50 flex-row'>
+      
       <div className="flex w-1/5 flex-col">
-  {doctorSpecializations.map((specialization, index) => (
-    <div className='text-black border-cyan-500 border cursor-pointer' onClick={()=>setDocspez(specialization.name)} key={index}>
-      {specialization.name}
-    </div>
-  ))}
-</div>
+        {doctorSpecializations.map((specialization, index) => (
+          <div
+            key={index}
+            className='text-black border-cyan-500 border cursor-pointer p-2'
+            onClick={() => setDocspez(specialization.name)}
+          >
+            {specialization.name}
+          </div>
+        ))}
+      </div>
 
-    <div className="flex flex-wrap gap-4 p-4">
-      {filteredDocs.map((doctor, index) => (
-        <div key={index} onClick={() => handleChange(doctor.id)} className="border p-4 rounded-lg w-60">
-          <img
-            src={doctor.imgSrc}
-            alt={doctor.name}
-            className="w-full cursor-pointer  h-40 object-cover rounded-t-lg"
-          />
-          <h3 className="text-lg cursor-pointer font-semibold mt-2">{doctor.name}</h3>
-          <p className="text-sm text-gray-600">{doctor.specialization}</p>
-        </div>
-      ))}
+   
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 w-full ">
+        {filteredDocs.map((doctor, index) => (
+          <div
+            key={index}
+            className="flex flex-col cursor-pointer"
+            onClick={() => handleDoctorClick(doctor.id)} // Pass the doctor's id on click
+          >
+            <img className='rounded-lg w-80 h-52' src={doctor.imgSrc} alt={doctor.name} />
+            <div className="flex-col flex">
+              <p className="font-semibold">{doctor.name}</p>
+              <p className="text-gray-500">{doctor.specialization}</p>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
     </div>
   );

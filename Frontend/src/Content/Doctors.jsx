@@ -14,7 +14,7 @@ const handleDoctorClick = () => {
 
   return (
     <div className="h-auto  bg-green-50">
-      <div className="w-4/5 flex gap-2 flex-col m-auto pt-60">
+      <div className="w-5/6 flex gap-2 flex-col m-auto pt-60">
         
         <div>
           <Department/>
@@ -33,7 +33,7 @@ const handleDoctorClick = () => {
           {doctors.map((doctor,index)=>{
            return (
             <div onClick={handleDoctorClick} className=" flex flex-col" key={index}>
-              <img className='rounded-sm h-52' src={doctor.imgSrc} alt="" />
+              <img className='rounded-lg h-52' src={doctor.imgSrc} alt="" />
               <div className="flex-col flex">
               <p className="font-semibold">{doctor.name}</p>
               <p className="text-gray-500">{doctor.specialization}</p>
