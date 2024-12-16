@@ -11,6 +11,8 @@ const Alldoctors = () => {
  
   const filteredDocs = docspez ? doctors.filter(doctor => doctor.specialization === docspez) : doctors;
 
+window.scrollTo(0, 0);
+
   const handleDoctorClick = (doctorid) => {
     navigate(`/alldoc/${doctorid}`);
   }

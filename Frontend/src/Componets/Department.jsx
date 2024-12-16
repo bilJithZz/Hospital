@@ -29,7 +29,7 @@ const Department = () => {
         },
         {
             id: "3",
-            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQubSneQ_ldwHfi5cbRUMN9K0eN3mEr2XS5ne-7aKWTc9x18RQNqM-fqHdVXuFiVZojwDo_Z0Ok0Ni7pDl4vrGxcTjAP0YTF922DDsWB_fHlw",
+            img: "https://img.freepik.com/free-vector/cardiologists-examining-heart-with-stethoscope-blood-samples-lab-tubes-pills-heartbeat-diagram-vector-illustration-cardiology-medical-examination-heart-disease-concept_74855-9817.jpg?t=st=1734330627~exp=1734334227~hmac=6bc1dcf5dd44a2b9320788945ece37b088315a79498217196eada788c6ffbe96&w=1060",
             name: "Neurology",
         },
         {

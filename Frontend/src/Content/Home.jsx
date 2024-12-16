@@ -7,6 +7,9 @@ import Department from '../Componets/Department'
 import Contact from './Contact'
 
 const Home = () => {
+
+  window.scrollTo(0, 0);
+
   return (
     <div>
      <Hero/>

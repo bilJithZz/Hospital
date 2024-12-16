@@ -28,11 +28,11 @@ const handleDoctorClick = () => {
       <div className="flex">
       </div>
 
-        <div  className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full mt-8">
+        <div  className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full mt-1">
 
-          {doctors.map((doctor,index)=>{
+          {doctors.slice(0,12).map((doctor,index)=>{
            return (
-            <div onClick={handleDoctorClick} className=" flex flex-col" key={index}>
+            <div onClick={handleDoctorClick} className=" flex mt-5 gap-2 flex-col" key={index}>
               <img className='rounded-lg h-52' src={doctor.imgSrc} alt="" />
               <div className="flex-col flex">
               <p className="font-semibold">{doctor.name}</p>
@@ -42,8 +42,15 @@ const handleDoctorClick = () => {
               )
           })}
         </div>
- 
-    <p onClick={()=>{navigate('/alldoc')}} className='cursor-pointer w-32 flex text-center mt-6 py-3 px-6 bg-customGreen rounded-full'>See More</p>
+     <div className='bg-customGreen flex flex-col gap-9  p-10 mt-6 rounded-md'>
+      <div>
+          <p className='flex  text-white font-semibold justify-center text-4xl'>Ready to Start Youy journy to </p>
+          <p className='flex  text-white font-semibold m-2 justify-center text-4xl'> Better Health?</p>
+      </div>
+          <p className='flex  text-white font-semibold mb-3 justify-center text-xl'>Schedule your free consultation today </p>
+    
+    <p onClick={()=>{navigate('/alldoc')}} className='cursor-pointer w-64  m-auto flex text-center justify-center  py-3 px-6 bg-green-100 rounded-full'>Book an Appointment</p>
+      </div>
       </div>
     </div>
   );
