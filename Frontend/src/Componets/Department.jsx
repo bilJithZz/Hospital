@@ -72,14 +72,16 @@ const Department = () => {
                         className="flex  hover:text-customGreen cursor-pointer flex-col gap-3 p-3 rounded-md min-w-max"
                         key={department.id}
                     >
+                        <div className="p-3 bg-customGreen rounded-full">
                       <img
   onClick={handlechnage}
-  className={`h-36 w-36 p-1 rounded-full object-cover ${
+  className={`h-36 w-36 p-3 rounded-full object-cover ${
     selectdepartment ? "hover:bg-black" : "hover:bg-customGreen"
   }`}
   src={department.img}
   alt={department.name}
 />
+</div>
 
                         <p className="flex justify-center font-medium">{department.name}</p>
                     </div>
